@@ -1,0 +1,18 @@
+
+form {
+    .form-control {
+        color: $gray3;
+        border-radius: 20px;
+        padding: 10px 30px;
+        font-size: 1rem;
+        font-family: $azo-r;
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("../../img/icons/ic_arrow_down.svg");
+        background-repeat: no-repeat;
+        background-position-x: 95%;
+        background-position-y: 12px;
+    }
+}
