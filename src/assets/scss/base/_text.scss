@@ -1,0 +1,10 @@
+h1, h2, h4 {
+    font-family: $nexa-l;
+}
+
+p {
+    font-size: 1.125rem;
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+}

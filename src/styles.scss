@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'assets/scss/abstracts/variables.scss';
+@import 'assets/scss/base/reset';
+@import 'assets/scss/base/typography.scss';
+@import 'assets/scss/base/text.scss';
+@import 'assets/scss/layout/accordion.scss';
+@import 'assets/scss/layout/button.scss';
+@import 'assets/scss/layout/form.scss';
+
+@import '~bootstrap/scss/bootstrap.scss';
