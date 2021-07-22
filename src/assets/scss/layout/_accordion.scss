@@ -1,0 +1,46 @@
+.accordion {
+    .card {
+        border: 0;
+        .card-header {
+            background-color: $gray1;
+            h2 {
+                button {
+                    font-family: $bebas;
+                    font-size: 30px;
+                    font-weight: bold;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .card-body {
+            padding: 20px 70px;
+            p {
+                color: $gray3;
+                font-size: 15px;
+                font-family: $azo-r;
+            }
+            ul {
+                li {
+                    color: $gray3;
+                    font-size: 15px;
+                    font-family: $azo-r;
+                    line-height: 24px;
+                    margin-bottom: 8px;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 5px;
+                        height: 5px;
+                        background-color: $gray3;
+                        border-radius: 20px;
+                        top: 6px;
+                        left: -20px;
+                    }
+                }
+            }
+        }
+    }
+}
