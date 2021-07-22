@@ -5,13 +5,25 @@ footer {
     padding: 40px 0;
 
     .footer {
-
+        .footer-img {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
         .footer-list {
             display: flex;
             flex-direction: row;
+            align-items: center;
+            @media (max-width: 990px) {
+                flex-direction: column;
+                margin-top: 60px;
+            }
             &__content {
                 margin-right: 60px;
                 position: relative;
+                @media (max-width: 990px) {
+                    margin-bottom: 20px;
+                }
 
                 &:nth-child(1) {
                     &::after {
@@ -22,6 +34,9 @@ footer {
                         background-color: $white;
                         top: 0;
                         right: -30px;
+                        @media (max-width: 990px) {
+                            display: none;
+                        }
                     }
                 }
 
@@ -36,15 +51,22 @@ footer {
                         top: 50%;
                         right:-30px;
                         transform: translateY(-50%);
+                        @media (max-width: 990px) {
+                            display: none;
+                        }
                     }
                 }
 
                 &:last-child {
                     margin-right: 0;
+                    @media (max-width: 990px) {
+                        margin-bottom: 0;
+                    }
                 }
 
                 a { 
                     color: $white;
+                    cursor: pointer;
                     font-family: $azo-r;
                     font-size: 21px;
                 }
