@@ -1,5 +1,5 @@
 <header>
-	<nav class="navbar navbar-transparent fixed-top bg-transparent">
+	<nav class="navbar navbar-main fixed-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">
 				<img src="../assets/img/logo/logo.svg" alt="">
@@ -11,19 +11,52 @@
 <section id="hero">
 	<div class="hero">
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row hero-content">
 				<div class="col-lg-6">
-					hola
+					<div class="hero-text">	
+						<h1 class="hero-text__title">
+							Seguro Obligatorio de Salud
+						</h1>
+						<h2 class="hero-text__subtitle">
+							asociado a COVID-19
+						</h2>
+					</div>
 				</div>
-				<div class="col-lg-6">
-					hola
+				<div class="col-lg-6 d-flex justify-content-center">
+					<div class="hero-form">
+						<form action="">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Numero de celular">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Nombre Completo">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Empresa">
+							</div>
+							<div class="form-group">
+								<select name="" id="" class="form-control">
+									<option value="">Soy cliente?</option>
+									<option value="">Soy empresa?</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary btn-main button-submit">
+									enviar
+								</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
+		<!-- backgrounds -->
+		<div class="background-1"></div>
+		<div class="background-2"></div>
 	</div>
-	<!-- backgrounds -->
-	<div class="background-1"></div>
-	<div class="background-2"></div>
 </section>
 
 <section id="secure">
@@ -249,12 +282,12 @@
 						<div class="card">
 							<div class="card-header" id="headingThree">
 								<h2 class="mb-0">
-									<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+									<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseTwo">
 										¿Cubre este seguro a extranjeros sin residencia Chilena?
 									</button>
 								</h2>
 							</div>
-							<div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+							<div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 								<div class="card-body">
 									<ul>
 										<li>
@@ -274,12 +307,12 @@
 						<div class="card">
 							<div class="card-header" id="headingThree">
 								<h2 class="mb-0">
-									<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+									<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseTwo">
 										¿Cuánto tiempo tiene el empleador para contratar este seguro?
 									</button>
 								</h2>
 							</div>
-							<div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+							<div id="collapseSeven" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 								<div class="card-body">
 									<ul>
 										<li>
@@ -296,12 +329,12 @@
 						<div class="card">
 							<div class="card-header" id="headingThree">
 								<h2 class="mb-0">
-									<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+									<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseTwo">
 										¿Debo contratar este seguro a mi trabajadora del hogar, jardinero, chofer u otra persona que trabaje en mi casa particular?
 									</button>
 								</h2>
 							</div>
-							<div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+							<div id="collapseEight" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 								<div class="card-body">
 									<ul>
 										<li>
@@ -333,4 +366,73 @@
 		</div>
 	</div>
 </section>
+<button type="button" class="btn btn-info btn-sales" data-toggle="modal" data-target="#exampleModal">
+	Venta asistida <br> aquí
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="recomendation">
+					<div class="recomendation-person">
+						<div class="recomendation-person__img">
+							<img src="assets/img/icons/ic_user.svg" alt="">
+						</div>
+						<p class="recomendation-person__text">
+							Recomendado para <br>
+							venta individual
+						</p>
+						<h5 class="recomendation-person__info">
+							<span>CONTRÁTALO</span>
+							tu mismo con tu Tarjeta de Crédito
+						</h5>
+						<h5 class="recomendation-person__pricing">
+							$11.980* <br>
+							<p>
+								0,412 UF (IVA incluido) Por persona
+							</p>
+						</h5>
+						<a href="" class="btn btn-primary btn-main">
+							contrata aqui
+						</a>
+						<p class="recomendation-person__footer">
+							Para <span>1 persona</span> 1 persona con tarjeta de crédito con comprobante transbank
+						</p>
+					</div>
+					<div class="recomendation-person">
+						<div class="recomendation-person__img">
+							<img src="assets/img/icons/ic_user.svg" alt="">
+						</div>
+						<p class="recomendation-person__text">
+							Recomendado para grupos <br>
+							decolaboradores
+						</p>
+						<h5 class="recomendation-person__info">
+							<span>Solicita</span>
+							tu venta asistida
+						</h5>
+						<h5 class="recomendation-person__pricing">
+							$11.980* <br>
+							<p>
+								0,412 UF (IVA incluido) Por persona
+							</p>
+						</h5>
+						<a href="" class="btn btn-primary btn-main">
+							solicita aqui
+						</a>
+						<p class="recomendation-person__footer">
+							Para <span>2 o mas personas</span> pagando por transferencia con factura
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <app-footer></app-footer>

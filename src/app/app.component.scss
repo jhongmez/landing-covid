@@ -1,4 +1,9 @@
 @import 'src/styles';
+header {
+    .navbar-main {
+        background-color: rgba($gray1, 0.3);
+    }
+}
 
 #hero {
     position: relative;
@@ -11,29 +16,72 @@
         height: 750px;
         position: relative;
         z-index: 1;
+        padding-top: 7rem;
+        .hero-content {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 4;
+            .hero-text {
+                .hero-text__title {
+                    color: $secondary;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-shadow: 2px 2px 7px rgba($black, 0.5);
+                    width: 70%;
+                    @media (max-width: 769px) {
+                        width: 100%;
+                    }
+                }
+                .hero-text__subtitle {
+                    color: $white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-shadow: 2px 2px 7px rgba($black, 0.5);
+                }
+            }
+            .hero-form {
+                background-color: rgba($black, 0.5);
+                border-radius: 20px;
+                padding: 20px;
+                width: 380px;
 
-    }
-    .background-1 {
-        background-image: url('../assets/img/backgrounds/b-section-01.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        margin-top: -500px;
-        width: 100%;
-        height: 840px;
-        position: relative;
-        z-index: 3;
-    }
-    .background-2 {
-        background-image: url('../assets/img/backgrounds/b-section-02.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-        margin-top: -550px;
-        width: 100%;
-        height: 200px;
-        position: relative;
-        z-index: 2;
+                .button-submit {
+                    width: 100%;
+                    font-size: 1rem;
+                    padding: 10px 0;
+                }
+            }
+        }
+        .background-1 {
+            background-image: url('../assets/img/backgrounds/b-section-01.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            margin-top: -210px;
+            width: 100%;
+            height: 750px;
+            position: relative;
+            z-index: 3;
+            @media (max-width: 1024px) {
+                margin-top: -280px;
+            }
+            @media (max-width: 426px) {
+                margin-top: -370px;
+            }
+        }
+        .background-2 {
+            background-image: url('../assets/img/backgrounds/b-section-02.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            margin-top: -500px;
+            width: 100%;
+            height: 250px;
+            position: relative;
+            z-index: 2;
+            
+        }
     }
 }
 
@@ -42,7 +90,7 @@
     z-index: 2;
 
     .secure {
-        padding-top: 3rem;
+        padding-top: 2rem;
         position: relative;
         z-index: 1;
 
@@ -65,17 +113,38 @@
         .secure-content {
             display: flex;
             align-items: center;
+            @media (max-width: 1024px) {
+                flex-direction: column-reverse;
+            }
+
+            &__img {
+                img {
+                    @media (max-width: 1024px) {
+                        width: 100%;
+                    }
+                }
+            }
 
             &__description {
                 padding-left: 120px;
+                @media (max-width: 1024px) {
+                    padding-top: 40px;
+                    padding-left: 0;
+                }
 
                 .title {
                     color: $primary;
                     font-weight: bold;
+                    text-align: center;
                 }
                 .list {
                     padding-top: 40px;
                     padding-right: 120px;
+
+                    @media (max-width: 1024px) {
+                        padding-left: 60px;
+                        padding-right: 20px;
+                    }
                     li {
                         position: relative;
                         margin-bottom: 40px;
@@ -171,6 +240,111 @@
             color: $gray3;
             text-align: center;
             font-size: 11px;
+        }
+    }
+}
+
+.btn-sales {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 70%;
+    right: 0px;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    z-index: 10;
+    &::after {
+        content: url('../assets/img/icons/ic_hand.svg');
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+    }
+}
+
+.modal {
+    .modal-header {
+        border-bottom: 0;
+    }
+    .modal-body {
+
+        .recomendation {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 40px;
+            .recomendation-person {
+                padding: 0 20px;
+                position: relative;
+                padding: 0 80px;
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 1rem;
+                    height: 100%;
+                    width: 1px;
+                    background-color: $gray2;
+
+                }
+                .recomendation-person__img {
+                    background-color: $secondary;
+                    border-radius: 100%;
+                    width: 124px;
+                    height: 124px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .recomendation-person__text {
+                    font-size: 0.9375rem;
+                    font-family: $azo-r;
+                    color: $gray3;
+                    padding-top: 20px;
+                }
+
+                .recomendation-person__info {
+                    font-size: 1.25rem;
+                    font-family: $azo-r;
+                    color: $gray3;
+
+                    span {
+                        color: $secondary;
+                    }
+                }
+
+                .recomendation-person__pricing {
+                    color: $gray3;
+                    font-family: $azo-r;
+                    font-size: 2.125rem;
+                    p {
+                        font-family: $azo-r;
+                        font-size: 0.75rem;
+                    }
+
+                }
+
+                .recomendation-person__footer {
+                    color: $gray3;
+                    font-family: $azo-r;
+                    font-size: 0.875rem;
+                    padding-top: 20px;
+                    text-transform: uppercase;
+
+                    span {
+                        color: $secondary;
+                    }
+                }
+            }
         }
     }
 }
