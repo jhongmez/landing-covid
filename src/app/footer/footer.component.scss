@@ -1,0 +1,55 @@
+@import 'src/styles';
+
+footer {
+    background-color: $yellow;
+    padding: 40px 0;
+
+    .footer {
+
+        .footer-list {
+            display: flex;
+            flex-direction: row;
+            &__content {
+                margin-right: 60px;
+                position: relative;
+
+                &:nth-child(1) {
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 2px;
+                        height: 100%;
+                        background-color: $white;
+                        top: 0;
+                        right: -30px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        background-color: $white;
+                        border-radius: 100%;
+                        top: 50%;
+                        right:-30px;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a { 
+                    color: $white;
+                    font-family: $azo-r;
+                    font-size: 21px;
+                }
+            }
+        }
+
+    }
+}
